@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Dashboard</title>
+        <!--    stylesheet-->
+        <link rel="stylesheet" href="css/style-client.css">
+<!--        Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="Wrapper">
+            <div class="Sidebar">
+                <h1><a href="#home">Ngo logo</a></h1>
+                <ul>
+                    <li><a class="CurrentPage" href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Sessions</a></li>
+                    <li><a href="#">Help Desk</a></li>
+                </ul>
+            </div>
+            
+            <div class="UserDashboard">
+                <div class="Header">Welcome to Soul Space!
+                    <div class="info">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <img class="DashboardImage" src="Images/online_therapy.jpg">
+                    </div>
+                            
+                    <div class="col-6">
+                        <div class="UpcomingSessions">
+                            <h4>Display Upcoming sessions here</h4>
+                             {{#each counsellors}}
+                                <h1>
+                                 <li>{{this.fullname}}</li>
+                              </h1>
+                             {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
